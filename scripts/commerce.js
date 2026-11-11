@@ -243,7 +243,8 @@ export function getSkuFromUrl() {
     sku = window.xwalk.previewSku;
   }
 
-  return sku;
+  // Catalog SKUs are uppercase but product URLs are lowercase
+  return sku?.toUpperCase();
 }
 
 export function getOptionsUIDsFromUrl() {
